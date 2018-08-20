@@ -1,0 +1,26 @@
+"""
+
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+    # define range of white color in HSV
+    # change it according to your need !
+    lower_white = np.array([0,0,0], dtype=np.uint8)
+    upper_white = np.array([0,0,255], dtype=np.uint8)
+
+    # Threshold the HSV image to get only white colors
+    mask_2 = cv2.inRange(hsv, lower_white, upper_white)
+    # Bitwise-AND mask and original image
+    res = cv2.bitwise_and(fgmask,fgmask, mask= mask_2)
+"""
+
+
+
+"""bgr = cv2.cvtColor(res,cv2.COLOR_HSV2BGR)
+    gray  = cv2.cvtColor(bgr, cv2.COLOR_BGR2GRAY)
+
+    if old_frame is not None:
+            diff_frame = gray - old_frame
+            diff_frame -= diff_frame.min()
+            disp_frame = np.uint8(255.0*diff_frame/float(diff_frame.max()))
+            cv2.imshow('diff_frame',disp_frame)
+    old_frame = gray"""
