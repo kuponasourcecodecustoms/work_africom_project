@@ -3,7 +3,7 @@ import cv2
 from datetime import *
 import time
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture('768x576.avi')
 current_time=datetime.now()
 fgbg = cv2.createBackgroundSubtractorMOG2()
 
